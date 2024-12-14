@@ -13,4 +13,4 @@ add_subdirectory(Utility)
 add_executable(test1 test1.cpp)
 
 # Link the Utility library
-target_link_libraries(test1 PRIVATE StringOperations)
+target_link_libraries(test1 PRIVATE UtilityLibrary)

@@ -1,4 +1,4 @@
-#include <StringOperations.h>
+#include "StringOperations.h"
 
 StringOperations::StringOperations() {}
 
@@ -15,6 +15,19 @@ std::vector<int> StringOperations::split(std::string source, std::string delimit
     }
     std::string new_string = source.substr(prev_delim_index, source.size());
     items.push_back(stoi(new_string));
+
+    return items;
+}
+
+std::vector<int> StringOperations::findSubstringIndices(std::string source, std::string substring) {
+
+    std::vector<int> items;
+    size_t search_index = 0;
+    while((search_index = source.find(substring, search_index)) != std::string::npos) {
+
+        items.push_back(search_index);
+        search_index += substring.size();
+    }
 
     return items;
 }
