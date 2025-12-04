@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_subdirectory(Utility)
 
 # Add the executable
-add_executable(test1 test1.cpp)
+add_executable(test test.cpp)
 
 # Link the Utility library
-target_link_libraries(test1 PRIVATE UtilityLibrary)
+target_link_libraries(test PRIVATE UtilityLibrary)
