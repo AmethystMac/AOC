@@ -1,15 +1,11 @@
 #include <iostream>
 
-#include "IntOperations.h"
-#include "StringOperations.h"
 #include "InputOutputStream.h"
 
 using namespace std;
 #define ll long long int
 #define endl "\n"
 
-IntOperations intOp;
-StringOperations stringOp;
 InputOutputStream ioStream;
 
 int main() {

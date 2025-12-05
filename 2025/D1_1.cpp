@@ -1,23 +1,16 @@
 #include <iostream>
-#include <algorithm>
-#include <vector>
-#include <fstream>
 
-#include "IntOperations.h"
-#include "StringOperations.h"
 #include "InputOutputStream.h"
 
 using namespace std;
 #define ll long long int
 #define endl "\n"
 
-IntOperations intOp;
-StringOperations stringOp;
 InputOutputStream ioStream;
 
 int main() {
 
-    ioStream.readFile("/home/amethystmac/Desktop/Projects/AOC/input.txt");
+    ioStream.readFile(ioStream.getCurrentDirectory() + "/../input.txt");
 
     int ans = 0, currVal = 50;
     string line;
