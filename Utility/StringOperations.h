@@ -3,9 +3,12 @@
 #include <iostream>
 #include <vector>
 
+#define ll long long int
+
 class StringOperations {
 public:
     StringOperations();
-    std::vector<int> split(std::string source, std::string delimiter);
+    std::pair<std::string, std::string> splitMid(std::string source);
+    std::vector<std::string> splitByDelimiter(std::string source, std::string delimiter);
     std::vector<int> findSubstringIndices(std::string source, std::string substring);
 };

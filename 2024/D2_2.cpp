@@ -19,7 +19,7 @@ int main() {
     int ans = 0;
     while(getline (in, line)) {
 
-        vector<int> vec_line = stringOp->split(line, " ");
+        vector<int> vec_line = stringOp->splitByDelimiter(line, " ");
 
         int n = vec_line.size();
 

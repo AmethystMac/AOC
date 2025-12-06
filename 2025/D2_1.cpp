@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "IntOperations.h"
 #include "StringOperations.h"
 #include "InputOutputStream.h"
 
@@ -8,7 +7,6 @@ using namespace std;
 #define ll long long int
 #define endl "\n"
 
-IntOperations intOp;
 StringOperations stringOp;
 InputOutputStream ioStream;
 
@@ -24,7 +22,12 @@ ll findInvalidIds(string line) {
         string id = startId;
         ll intId = intStartId;
         while (intId <= intEndId) {
-            
+            if (id.size() % 2 == 0) {
+                auto halfPair = stringOp.splitMid(id);
+                if (halfPair.first == halfPair.second) {
+                    ans += intId;
+                }
+            }
 
             intId++;
             id = to_string(intId);
